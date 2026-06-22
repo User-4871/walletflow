@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>WalletFlow</title>
+  
+  <link rel="manifest" href="manifest.json">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="WalletFlow">
+  <link rel="apple-touch-icon" href="https://img.icons8.com/fluent/512/wallet.png">
+  
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #0F172A; }
+    iframe { border: none; width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+
+  <iframe src="https://script.google.com/macros/s/AKfycbxsQhm_0ER3GomTdBI7DNYxvWWl4R9Uf5YtVL4ZNc35sKGzN2XFDVCSvOJ7TyAoaASa/exec"></iframe>
+
+  <script>
+    // ลงทะเบียน Service Worker เพื่อให้ผ่านระบบติดตั้ง PWA
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(function() {
+        console.log('Service Worker Registered');
+      });
+    }
+  </script>
+</body>
+</html>
